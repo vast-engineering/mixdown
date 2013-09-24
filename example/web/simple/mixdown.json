@@ -5,7 +5,12 @@
       "127.0.0.1"
     ],
     "plugins": {
-
+      "hello-world": {
+        "module": "/test/fixtures/testPlugin.js",
+        "options": {
+          "hello": "bonjour"
+        }
+      }
     }
   },
 

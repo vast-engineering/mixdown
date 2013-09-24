@@ -23,7 +23,7 @@ suite('Test pluginutil', function () {
     };
 
     pluginUtil.use({
-      app: app,
+      app: app.plugins,
       namespace: 'hello-world',
       plugin: {
         module: '/test/fixtures/testPlugin.js',
