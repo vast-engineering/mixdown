@@ -13,7 +13,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R spec -u tdd test/tests/*.js"
   },
   "repository": {
     "type": "git",
