@@ -1,7 +1,12 @@
 {
   "app": {
     "plugins": {
-
+      "hello-world": {
+        "module": "/test/fixtures/testPlugin.js",
+        "options": {
+          "hello": "hello"
+        }
+      }
     }
   },
 

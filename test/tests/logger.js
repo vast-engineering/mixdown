@@ -24,7 +24,6 @@ suite('Logger init', function () {
       "transports": [{ "transport": "Console" }
       ]
     });
-    console.error(require('util').inspect(logger));
 
     assert.ok(_.isFunction(logger.debug), "Should contain log level debug");
     assert.ok(_.isFunction(logger.info), "Should contain log level info");

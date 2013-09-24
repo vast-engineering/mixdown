@@ -7,11 +7,7 @@
 
   "logger": {
     "defaults": {
-      "handleExceptions": false,
-      "json": false,
-      "timestamp": true,
-      "colorize": true,
-      "prettyPrint": true
+      "handleExceptions": true
     },
     "transports": [
       {
@@ -30,13 +26,9 @@
   },
 
   "services": {
-    "module": "mixdown-config-couchdb",
+    "module": "mixdown-config-filesystem",
     "options": {
-      "host": "localhost",
-      "port": 5984,
-      "databaseName": "mixdown_services",
-      "extraConf": { 
-      }
+      "paths": ["/example/web/multi-site/sites"]
     }
   },
 
