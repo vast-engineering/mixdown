@@ -1,6 +1,7 @@
 var _ = require('lodash');
 var assert = require('assert');
 var pluginUtil = require('../../lib/pluginutil.js');
+var broadway = require('broadway');
 
 suite('Test pluginutil', function () {
 
@@ -17,7 +18,9 @@ suite('Test pluginutil', function () {
   });
 
   test('Test use() with namspace', function (done) {
-    var app = require('../fixtures/app.js')();
+    var app = {
+      plugins: new broadway.App()
+    };
 
     pluginUtil.use({
       app: app,
