@@ -1,0 +1,46 @@
+{
+  "name": "mixdown",
+  "version": "0.0.0",
+  "description": "Mixdown components are used to create and remix web app and cli services.",
+  "contributors": [
+    "Tommy Messbauer",
+    "Eric Capps",
+    "Mike Behrman",
+    "Chad Gowan"
+  ],
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mixdown/mixdown.git"
+  },
+  "keywords": [
+    "mixdown",
+    "cli",
+    "http",
+    "web"
+  ],
+  "author": "tommy@vast.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixdown/mixdown/issues"
+  },
+  "dependencies": {
+    "lodash": "~2.1.0",
+    "broadway": "~0.2.7",
+    "winston": "~0.7.2",
+    "winston-syslog": "git+https://github.com/vast-eng/winston-syslog.git",
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "tape": "~1.1.0",
+    "tap": "~0.4.4",
+    "broadway": "~0.2.7"
+  }
+}

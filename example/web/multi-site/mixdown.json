@@ -1,0 +1,45 @@
+{
+  "app": {
+    "plugins": {
+
+    }
+  },
+
+  "logger": {
+    "defaults": {
+      "handleExceptions": false,
+      "json": false,
+      "timestamp": true,
+      "colorize": true,
+      "prettyPrint": true
+    },
+    "transports": [
+      {
+        "transport": "Console"
+      }
+    ]
+  },
+
+  "services": {
+    "module": "mixdown-config-filesystem",
+    "options": {
+      "paths": ["./example/web/multi-site/sites"]
+    }
+  },
+
+  "main": {
+    "module": "mixdown-server",
+    "options": {
+      "listen": {
+        "port": 8081,
+        "type": "tcp",
+        "path": "/var/run/mixdown.sock"
+      },
+      "cluster": {
+        "on": true,
+        "workers": 2
+      }
+    }
+  }
+
+}

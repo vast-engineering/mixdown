@@ -1,0 +1,54 @@
+{
+  "app": {
+    "plugins": {
+
+    }
+  },
+
+  "logger": {
+    "defaults": {
+      "handleExceptions": false,
+      "json": false,
+      "timestamp": true,
+      "colorize": true,
+      "prettyPrint": true
+    },
+    "transports": [
+      {
+        "transport": "Syslog",
+        "options": {
+          "handleExceptions": true,
+          "facility": "local1",
+          "level": "info",
+          "host": "localhost",
+          "port": 514,
+          "app_name": "multi-site",
+          "pid": null
+        }
+      }
+    ]
+  },
+
+  "apps": {
+    "module": "mixdown-config-couchdb",
+    "options": {
+      "host": "localhost",
+      "port": 5984,
+      "databaseName": "mixdown_services",
+      "extraConf": { 
+      }
+    }
+  },
+
+  "main": {
+    "module": "mixdown-server",
+    "options": {
+      "listen": {
+        "port": 8081,
+        "type": "tcp",
+        "path": "/var/run/mixdown.sock"
+      }
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+{
+  "app": {
+    "vhosts": [
+      "localhost",
+      "127.0.0.1"
+    ],
+    "plugins": {
+
+    }
+  },
+
+  "main": {
+    "module": "mixdown-server",
+    "options": {
+      "listen": {
+        "port": 8081,
+        "type": "tcp",
+        "path": "/var/run/mixdown.sock"
+      }
+    }
+  }
+
+}

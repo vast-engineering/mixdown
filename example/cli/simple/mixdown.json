@@ -1,0 +1,19 @@
+{
+  "app": {
+    "vhosts": [
+      "localhost",
+      "127.0.0.1"
+    ],
+    "plugins": {
+
+    }
+  },
+
+  "main": {
+    "module": "mixdown-cli",
+    "options": {
+      "main": "./example/cli/simple/main.js"
+    }
+  }
+
+}
