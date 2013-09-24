@@ -23,7 +23,7 @@
   "services": {
     "module": "mixdown-config-filesystem",
     "options": {
-      "paths": ["./example/web/multi-site/sites"]
+      "paths": ["/example/web/multi-site/sites"]
     }
   },
 

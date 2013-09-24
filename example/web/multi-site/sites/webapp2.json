@@ -1,8 +1,13 @@
 {
- "hosts": [
-   "web2.local.com"
- ],
- "plugins": { 
-   
- }
+  "hosts": [
+    "web2.local.com"
+  ],
+  "plugins": { 
+    "hello-world": {
+      "module": "/test/fixtures/testPlugin.js",
+      "options": {
+        "hello": "bonjour"
+      }
+    }
+  }
 }
