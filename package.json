@@ -34,7 +34,7 @@
     "lodash": "~2.2.0",
     "broadway": "~0.2.7",
     "winston": "~0.7.2",
-    "winston-syslog": "git+https://github.com/vast-eng/winston-syslog.git",
+    "winston-syslog": "indexzero/winston-syslog",
     "async": "~0.2.9",
     "mixdown-config-filesystem": "~0.0.2"
   },
