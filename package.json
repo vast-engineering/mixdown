@@ -33,10 +33,9 @@
   "dependencies": {
     "lodash": "~2.2.0",
     "broadway": "~0.2.7",
-    "winston": "~0.7.2",
-    "winston-syslog": "indexzero/winston-syslog",
     "async": "~0.2.9",
-    "mixdown-config-filesystem": "~0.0.2"
+    "mixdown-config-filesystem": "~0.0.2",
+    "bucker": "~0.6.4"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
