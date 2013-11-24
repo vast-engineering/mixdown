@@ -14,6 +14,13 @@
     }
   },
 
+  "services": {
+    "module": "mixdown-config-filesystem",
+    "options": {
+      "paths": 0
+    }
+  },
+
   "main": {
     "module": "mixdown-server",
     "options": {

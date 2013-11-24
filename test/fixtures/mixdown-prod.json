@@ -6,23 +6,13 @@
   },
 
   "logger": {
-    "defaults": {
-      "handleExceptions": true
-    },
-    "transports": [
-      {
-        "transport": "Syslog",
-        "options": {
-          "handleExceptions": true,
-          "facility": "local1",
-          "level": "info",
-          "host": "localhost",
-          "port": 514,
-          "app_name": "multi-site",
-          "pid": null
-        }
-      }
-    ]
+    "level":"info",
+    "handleExceptions":false,
+    "syslog":{
+      "host":"localhost",
+      "port":514,
+      "app_name":"multi-site"
+    }
   },
 
   "services": {

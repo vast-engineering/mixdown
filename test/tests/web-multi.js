@@ -49,7 +49,7 @@ suite('Multi-site example with env config - initialization', function () {
     mixdown.init(function(err) {
 
     assert.deepEqual(mixdown.config, simpleApp, 'Mixdown Instance should have its config set');
-    assert.ok(global.logger.transports['mixdown-logger-0-Syslog'], 'Syslog Logger should be attached to global namespace');
+    assert.ok(global.logger.options.syslog, 'Syslog Logger should be attached to global namespace');
     assert.equal(Object.keys(mixdown.apps).length, 2, 'Mixdown should have generated 2 app');
     done();
 
