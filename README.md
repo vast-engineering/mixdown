@@ -153,7 +153,7 @@ If we added the following plugin config, now we have a a home page route defined
 
 ```
 
-The corresponding code to handle the request is neatly tucked away in its own file.  It looks like this:
+The controller code to handle the request is neatly tucked away in its own file.  It looks like this:
 
 ```javascript
 
