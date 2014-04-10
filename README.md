@@ -68,6 +68,20 @@ $ npm start
 
 ```
 
+# Radical Reusability
+
+Quotes below are copied from [substack](https://github.com/substack), originally posted [HERE](http://substack.net/node_aesthetic).
+
+> Many modules on npm export only a single function by assigning onto module.exports such that require('modulename') returns just that single function of interest. It also helps that module names have a direct correspondence to the string that you put in your call to require() and that require() just returns the module instead of modifying the environment to include the module. 
+
+Keep your plugins small, use npm to get them into your package/app, use broadway to pluginify them, then use mixdown to activate them and do dependency injection. 
+
+> While the limited surface area approach can hurt extensibility, you can win a great deal of extensibility back by breaking up problems into lots of tiny modules. When you write a module for general enough consumption to put up on npm, you can't contaminate your own implementation with too many implementation-specific details. It's also much easier to test and iterate on code in complete isolation from your application business logic. Node and npm go to great lengths to help you do this.
+
+Mixing chocolate and peanut butter was a brilliant mishap that resulted in yummy-ness.  However, mixing concerns in software is more akin to bleach and ammonia - poison.  Building plugins in isolation helps you keep your app code and business logic separated.  That separation yields a few extremely important advantages
+
+1. Easier to unit test sections of the app
+2. Easier to re-use (re-mix) the components
 
 # Plugins
 
