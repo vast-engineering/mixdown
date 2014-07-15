@@ -1,20 +1,13 @@
-module.exports = function(namespace) {
-  namespace = namespace || 'namespace-not-defined';
+var BasePlugin = require('mixdown-app').Plugin;
 
-  this.attach = function(options) {
-
-    this[namespace] = {
-      initialized: false,
-      hello: options.hello,
-      sayHello: function() {
-        return options.hello;
-      }
-    };
-
-  };
-
-  this.init = function(done) {
-    this[namespace].initialized = true;
+module.exports = BasePlugin.extend({
+  _namespace_default: 'hello',
+  sayHello: function() {
+    return this._options.hello;
+  },
+  initialized: false,
+  _setup: function(done) {
+    this.initialized = true;
     done();
-  };
-};
+  }
+});

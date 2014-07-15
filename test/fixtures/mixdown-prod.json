@@ -1,17 +1,22 @@
 {
   "app": {
     "plugins": {
-
+      "hello-world": {
+        "module": "/test/fixtures/testPlugin.js",
+        "options": {
+          "hello": "hello world"
+        }
+      }
     }
   },
 
   "logger": {
-    "level":"info",
-    "handleExceptions":false,
-    "syslog":{
-      "host":"localhost",
-      "port":514,
-      "app_name":"multi-site"
+    "level": "info",
+    "handleExceptions": false,
+    "syslog": {
+      "host": "localhost",
+      "port": 514,
+      "app_name": "multi-site"
     }
   },
 
