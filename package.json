@@ -38,7 +38,7 @@
     "mixdown-app": "^3.0.4",
     "mixdown-cli": "0.0.3",
     "mixdown-config-filesystem": "^3.0.0",
-    "mixdown-server": "^2.0.1"
+    "mixdown-server": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "^1.20.1"
