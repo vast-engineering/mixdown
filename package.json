@@ -1,6 +1,6 @@
 {
   "name": "mixdown",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Mixdown components are used to create and remix web app and cli services.",
   "contributors": [
     "Tommy Messbauer",
