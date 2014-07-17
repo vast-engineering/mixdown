@@ -7,12 +7,12 @@ var pluginUtil = require('./lib/pluginutil.js');
 var mixdownLogger = require('./lib/logger');
 
 /**
- *	Mixdown - loads and manages configuration for environment and sites.
- * 	@param config - Object containing the server configuration.
+ *  Mixdown - loads and manages configuration for environment and sites.
+ *  @param config - Object containing the server configuration.
  **/
 var Mixdown = function(config) {
   this.config = config;
-  this._externalMixdown = null;
+  this._externalConfig = null;
   this.services = null;
   this.overlays = null;
 
@@ -31,7 +31,7 @@ Mixdown.prototype.init = function(callback) {
   // initialize services (sites or cli apps)
   var self = this;
 
-  this.getExternalMixdown(function(err, _externalMixdown) {
+  this.getExternalConfig(function(err, _externalConfig) {
 
     if (err && typeof(callback) === 'function') {
       callback(err);
@@ -40,7 +40,7 @@ Mixdown.prototype.init = function(callback) {
       throw err;
     }
 
-    _externalMixdown.config.get(function(err, services) {
+    _externalConfig.config.get(function(err, services) {
 
       // Do not bubble exception on error here.  Just log the error and continue.
       if (err && logger) {
@@ -94,15 +94,15 @@ Mixdown.prototype.initLogger = function() {
 
 };
 
-Mixdown.prototype.getExternalMixdown = function(callback) {
+Mixdown.prototype.getExternalConfig = function(callback) {
 
-  if (this.services && this._externalMixdown) {
-    typeof(callback) === 'function' ? callback(null, this._externalMixdown) : null;
+  if (this.services && this._externalConfig) {
+    typeof(callback) === 'function' ? callback(null, this._externalConfig) : null;
     return;
   }
 
   // setup an app to attach the external config plugin.
-  this._externalMixdown = new App();
+  this._externalConfig = new App();
 
   // ensure defaults for external config.
   _.defaults(this.config.services || {}, {
@@ -114,15 +114,15 @@ Mixdown.prototype.getExternalMixdown = function(callback) {
     plugin: _.defaults(this.config.services || {}, {
       module: "mixdown-config-filesystem"
     }),
-    app: this._externalMixdown,
+    app: this._externalConfig,
     namespace: 'config'
   });
 
   // initialize dist config module
   var self = this;
-  debugger;
-  this._externalMixdown.setup(function(err) {
-    typeof(callback) === 'function' ? callback(err, self._externalMixdown) : null;
+
+  this._externalConfig.setup(function(err) {
+    typeof(callback) === 'function' ? callback(err, self._externalConfig) : null;
   });
 };
 
